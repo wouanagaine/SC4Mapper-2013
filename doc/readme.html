@@ -1,0 +1,267 @@
+<html>
+<head>
+<title>NHP SC4Mapper 2013 readme</title>
+<style  type="text/css">
+<!--
+.SC4DP
+{
+font-weight:bold;
+font-variant:small-caps;
+color:blue;
+}
+.title
+{
+font-size:30px;
+font-weight:bold;
+font-variant:small-caps;
+color:blue;
+}
+.titles
+{
+font-size:30px;
+font-weight:bold;
+font-variant:small-caps;
+color:black;
+}
+td
+{
+  color:black;
+}
+-->
+</style>
+</head>
+<center>
+<body bgcolor="white">
+
+<div style="position:absolute;top:140px;left:15px;width:100%">
+<font class=titles>NHP SC4Mapper 2013</font>
+</div>
+<div style="position:absolute;top:138px;left:12px;width:100%">
+<font class=title>NHP SC4Mapper 2013</font>
+</div>
+</center>
+<center><img src="./splash.jpg"/><img src="./womm.png"></center>
+<br>
+<br>
+<br>
+<center>
+<table width="800" border=0 cellspacing="0" cellpading="0">
+<tr><td align="center">
+<hr>
+</td></tr>
+<tr><td>
+<font class=SC4DP>SC4Mapper</font> is a compagnon utility of <a href="http://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=731" target="_blank"><font color="blue">SC4Terraformer</font></a>. SC4Terraformer is <b>not</b> required to use SC4Mapper.<br>
+It will help you to:
+<li>Export a region you made in SC4
+<li>Import a region that you have downloaded from STEX 
+<li>Take an overview picture of your region ( usefull for planning or including in a CJ )
+</td></tr>
+<tr><td align="center">
+<hr>
+</td></tr>
+<tr><td>
+The <font class=SC4DP>2013 Version</font> comes with long waiting bug fixes and new features:
+<li>Works on Vista,Win7 and even win8 
+<li>Unicode fixes
+<li>Zoom in/out for large regions
+<li>Integrated config.bmp editor
+<li>Best suitable config.bmp creation
+</td></tr>
+<tr><td align="center">
+<hr>
+</td></tr>
+<tr><td>
+Any operation should take less then 10 minutes, if SC4Mapper is doing nothing it certainly freezed and crashed<br/>
+In that case, run the Debug version and post the output in the <a href="http://sc4devotion.com/forums/index.php?topic=15456.0">support thread</a><br/>
+</td></tr>
+<tr><td align="center">
+<hr>
+</td></tr>
+<tr><td align="center">
+<hr>
+<H1>Let's take a tour of <font class=SC4DP>SC4Mapper</font></H1>
+<hr>
+</td></tr>
+
+<tr><td align="center">
+
+</td></tr>
+<tr><td align="center">
+<center><img src="ScreenShot070.jpg"/>
+</td></tr>
+<tr><td>
+This is the main screen of <font class=SC4DP>SC4Mapper</font>.<br>
+You can see the top bar buttons, where you can either
+<li>Load a region from one you have in your SimCity 4 folder to export it
+<li>Create a region from an external source file
+</td></tr>
+<tr><td align="center">
+<hr>
+<H1>Loading a region</H1>
+<hr>
+</td></tr>
+<tr><td >
+<center><img src="ScreenShot071.jpg"/></center>
+<center>So let's load the San Fransisco region from SC4</center><br>
+<center><img src="ScreenShot010.jpg"/></center>
+<center>You'll have to wait while loading the whole region</center><br>
+<center><img src="ScreenShot073.jpg"/></center>
+And here is the SF region loaded, with the layout of the cities on top of it<br>
+You see that you can scroll the window or enlarge it to get a better view<br>
+<center><img src="ScreenShot062.jpg"/></center>
+<center>You can also zoom in/out and hide the cities overlay</center><br>
+You can also see that more buttons on top menu are now enable<br>
+If you choose <b>Export region</b> you will be prompt for a destination file<br>
+<center><img src="ScreenShot074.jpg"/></center><br>
+So some explanations are needed here about the differents export formats
+<li><b>SC4M</b> is the file format that was made for having a 0.1m precision when exporting the region in SC4Terraformer. The SC4M not only store the elevations of your region, but also store the config.bmp used, and can store a HTML file that will be display when another user will import it
+<li><b>PNG</b> is the only 16 bit greyscale file format that can be read/write by Photoshop CS. This was originaly made for allow people to use image editors to edit the region.
+<li><b>RGB</b> is a normal RGB format, exactly BMP, that store the elevation following a specific scheme. It was made to get around the limitation of the 16 bit png that only Photoshop CS can read/write.
+<br><br>
+If you choose to export as <b>SC4M</b>, you will be prompt for a HTML file that will be included into the SC4M and displayed to the user when importing.
+<center><img src="ScreenShot076.jpg"/></center>
+<center>You should enter an <b>existing</b> html file. or cancel to avoid including any html file</center>
+<br>
+If everything is ok, you should see the following messagebox
+<center><img src="ScreenShot017.jpg"/></center>
+<br><br>
+Remember that the SC4M was specially designed to share your region at verious Exchanges.<br>
+The format include the config.bmp, so no need to add it in your upload<br>
+The format compress quite well, and when you will zip it to upload to any Exchange you won't see any gain<br>
+The PNG and RGB export format are available for <i>authoring</i> usage as you can edit them in any image editor that support them.
+</td></tr>
+<tr><td align="center">
+<hr>
+<H1>Creating a region</H1>
+<hr>
+</td></tr>
+<tr><td >
+When you click on <b>Create Region</b> you will be prompt to choose from what file format you want to import
+<center><img src="ScreenShot018.jpg"/></center>
+<center>The greyscale format is for creating a region from 8 bits greyscale image ( jpgs as found in the STEX )</center>
+<br><br>
+<li>If you choose to create a region from a SC4M
+<center><img src="ScreenShot022.jpg"/></center>
+You will be prompt for a SC4M file, and the region will be created ( you may have to wait few seconds in order to the application to generate to colors )<br/>
+An HTML file might be displayed if included in the SC4M
+<br>
+<li>If you choose to create a region from Greyscale
+<center><img src="ScreenShot023.jpg"/></center>
+You will have to indicate the image file<br>
+You can either specify a config.bmp or specify the size of the region in small city units, <b>in this case the region will include the most big cities it can, then medium and at last small cities</b><br>
+<i>Note: </i>The size of the region will be automatically computed when you enter the picture or the config.bmp<br>
+<i>Note: </i>You can change the region size to not match the picture file, in this case SC4Mapper will ask you to confirm<br>
+<br>
+As 8 bits pictures don't contain enougth information to represent a correct range of elevation, you can specify how much a change of 1 unit in grey will result in SC4
+<center><img src="ScreenShot024.jpg"/></center>
+<center><font class=SC4DP>SC4Mapper</font> includes the most commons factors used in terrain mods. See the description of the map you download to know which scale factor to use</center>
+<center>You can also specify a real number instead of the predifined values</center>
+<br><br>
+Creating region from <b>16 bits png</b> or <b>RGB</b> pictures will follow the same process whitout the <b>scale factor</b> question.
+</td></tr>
+<tr><td align="center">
+<hr>
+<H1>Saving a created region</H1>
+<hr>
+</td></tr>
+<tr><td>
+Once you have created the region, you will have to <b>Save Region</b> or else you won't be able to play the region in SC4
+<center><img src="ScreenShot063.jpg"/></center>
+<center>Give a name to the new region - <font class=SC4DP>SC4Mapper</font> will create a subfolder with this name in your regions folder</center>
+<center><img src="ScreenShot032.jpg"/></center>
+<center>Wait while the region is saving</center>
+</td></tr>
+
+<tr><td align="center">
+<hr>
+<H1>In place Config.bmp edition</H1>
+<hr>
+</td></tr>
+<tr><td>
+<center><img src="ScreenShot064.jpg"/></center>
+<center>Press the 'Edit config' button to enter the config editor</center>
+New buttons appears in the top toolbar:
+<li><b>Small City</b> : you will be able to create small cities
+<li><b>Medium City</b> : you will be able to create medium cities
+<li><b>Big City</b> : you will be able to create big cities
+<li><b>Erase City</b> : you will be able to remove a city ( usually for ocean )
+<li><b>Revert config</b> : revert to the original config.bmp
+<br/>
+To exit the config editor, just untoggle the 'Edit config' button
+<hr>
+To change city size:
+<li>select the size you want be clicking on the wanted button
+<li>move the mouse at the desired position
+<li>a blue rectangle of the size will be displayed
+<li>clic at the desired position
+<br>
+<br>
+<center><img src="ScreenShot065.jpg"/></center>
+<center>I want to add a big city at the blue place</center>
+<br>
+<center><img src="ScreenShot066.jpg"/></center>
+<center>After I clicked the new city is created and the surrounding cities have been changed accordingly</center>
+<hr>
+To remove a city:
+<li>clic the 'erase city' button
+<li>move the mouse on the desired city
+<li>a hashcrossed rectangle will be displayed
+<li>clic on the city
+<br>
+<br>
+<center><img src="ScreenShot067.jpg"/></center>
+<center>I want to add a remove the city at green hashcrossed place</center>
+<br>
+<center><img src="ScreenShot068.jpg"/></center>
+<center>After I clicked the city has been removed and a black square is displayed </center>
+<hr>
+<center><h1>But wait there is even more!!!</h1>
+What about getting only the most interesting part of a region ?</center>
+<hr>
+<center><img width='400' src="ScreenShot056.jpg"/>
+<img width='400' src="ScreenShot057.jpg"/><br/>
+Let's erase the whole last row of cities from the config
+</center>
+<center>
+<img width='800' src="ScreenShot058.jpg"/><br/>
+And now with CTRL and the down arrow key you can move the config overlay to get the exact region you want !!!
+</center>
+<br/>
+Of course you can move in any direction provided there is space to move !<br/>
+<hr>
+And you can even speed up the process by just getting a specific part !<br/>
+<center><img width='800' src="ScreenShot059.jpg"/><br/>
+By pressing CTRL and dragging around the cities you want
+<img width='800' src="ScreenShot060.jpg"/><br/>
+You can have the exact part you want to play on!
+</center>
+<br>
+Upon saving or export, only the non crossed hatched part of the region will be saved 
+</td></tr>
+	
+
+<tr><td align="center">
+<hr>
+<H1>This conclude the tour of SC4Mapper</H1>
+<hr>
+</td></tr>
+
+<tr><td align="center">
+<hr>
+<H1>Annexe : RGB Scheme</H1>
+<hr>
+</td></tr>
+<tr><td>
+<center><img src="amarco.png"/></center>
+<center>This is the RGB file from one map I released in the NHP Islands Maps Pack 01</center>
+<br>
+The RGB scheme retains the 0.1m precision by using the following rules:
+<li>the <b>blue</b> channel can increment by one unit, one unit increment represent 0.1m
+<li>the <b>green</b> channel increment by 16 units, one 16 unit increment represent 25.6m
+<li>the <b>red</b> channel increment by 16 units, one 16 unit increment represent 409.6m
+</td></tr>
+
+</table>
+</center>
+</body>
+</html>
