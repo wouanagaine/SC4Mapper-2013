@@ -7,6 +7,8 @@ check [SC4Devotion](http://www.sc4devotion.com) for more informations
 
 and [LEX](http://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2880) to get Windows executable
  
+Executables files need to be uploaded on the [LEX](http://sc4devotion.com/csxlex/) at [SC4Devotion](http://www.sc4devotion.com)
+
 Requierements
 =============
 - [python 2.7](http://www.python.org)
