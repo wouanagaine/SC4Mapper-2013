@@ -995,7 +995,7 @@ class OverView( wx.Frame ):
 
 			
 			im.save( path )
-			del im
+			#del im
 			dlgProg.Close()
 			dlgProg.Destroy()
 			wx.EndBusyCursor()
