@@ -79,7 +79,10 @@ def questionDialog(message, buttons=[wx.ID_OK, wx.ID_CANCEL], caption=''):
 
 	dlg = ModalQuestion(None, message, buttons, title=caption)
 	try:
-		return buttons[dlg.ShowModal()]
+		x = buttons[dlg.ShowModal()]
+		dlg.Destroy()
+		return x
 	except IndexError:
+		dlg.Destroy()
 		return None
 
