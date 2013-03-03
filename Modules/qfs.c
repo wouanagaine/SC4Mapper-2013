@@ -2,7 +2,7 @@
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-#include <python.h>
+#include <Python.h>
 #include <malloc.h>
 #include <memory.h>
 // Decode file (LUA & other compressed files)
@@ -288,7 +288,7 @@ static PyMethodDef QFSMethods[] =
 };
 
 
-_declspec( dllexport ) void  initQFS(void)
+PyMODINIT_FUNC initQFS(void)
 {
     (void) Py_InitModule("QFS", QFSMethods);
 }
