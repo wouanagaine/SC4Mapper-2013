@@ -26,7 +26,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-#include <python.h>
+#include <Python.h>
 #include <malloc.h>
 #include <memory.h>
 #include <math.h>
@@ -411,7 +411,7 @@ static PyMethodDef tools3DMethods[] =
 };
 
 
-_declspec( dllexport ) void  inittools3D(void)
+PyMODINIT_FUNC inittools3D(void)
 {
     (void) Py_InitModule("tools3D", tools3DMethods);
 }

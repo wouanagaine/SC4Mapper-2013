@@ -9,3 +9,12 @@ setup(
 	]
 )
 
+setup(
+	name = 'tools3D',
+	version = '1.0',
+	description = 'tools and utilities for 3D things',
+	ext_modules = [
+		Extension('tools3D', ['tools3D.cpp'])
+	]
+)
+
