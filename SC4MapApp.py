@@ -43,6 +43,7 @@ import wx.lib.masked as masked
 
 import rgnReader
 
+MAPPER_VERSION = "2013.5c"
 SCROLL_RATE = 1
 class CreateRgnFromFile( wx.Dialog ):
 	"""Dialog for entering region setting ( file , size , name, config.bmp )"""
@@ -1025,14 +1026,14 @@ class OverView( wx.Frame ):
 		self.zoomLevel = 1
 		self.zoomLevelPow = 0
 		
-		self.SetTitle( "NHP SC4Mapper 2013.5b Version " )
+		self.SetTitle( "NHP SC4Mapper %s Version "%MAPPER_VERSION )
 
 		
 	def CreateRgnOk( self ):
 		self.btnSave.Enable( True )
 		self.btnSaveRgn.Enable( True )
 		self.btnExportRgn.Enable( True )
-		self.SetTitle( "NHP SC4Mapper 2013.5b Version - "+self.regionName )
+		self.SetTitle( "NHP SC4Mapper %s Version - "%MAPPER_VERSION+self.regionName )
 		self.btnZoomIn.Enable( False )
 		self.btnZoomOut.Enable( True )
 		self.overlayCbx.Enable( True )
@@ -1797,7 +1798,7 @@ class OverView( wx.Frame ):
 		self.back.SetVirtualSize((self.region.height.shape[1],self.region.height.shape[0]))
 		
 		self.SetFocus()
-		self.SetTitle( "NHP SC4Mapper 2013.5b Version - "+self.regionName )
+		self.SetTitle( "NHP SC4Mapper %s Version - "%MAPPER_VERSION+self.regionName )
 		self.back.OnSize(None)		
 		  
 	
@@ -1886,7 +1887,7 @@ class SplashScreen(wx.SplashScreen):
 		self.ShowMain()
 
 	def ShowMain(self):
-		frame = OverView( None, "NHP SC4Mapper 2013.5b Version", (100,100) )
+		frame = OverView( None, "NHP SC4Mapper %s Version"%MAPPER_VERSION, (100,100) )
 		frame.Show()
 		
 
