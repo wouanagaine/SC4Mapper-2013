@@ -42,13 +42,10 @@ class SC4Entry( object ):
 	def __init__( self, buffer, idx ):
 		self.compressed = False	  
 		self.buffer = buffer
-		self.ident = struct.unpack( "H", buffer[ 0x0A:0x0A+2 ] )[0]    
-		self.fileLocation = struct.unpack( "l", buffer[ 0x0C:0x0C+4 ] )[0]
-		self.initialFileLocation = self.fileLocation
-		self.filesize = struct.unpack( "l", buffer[ 0x10:0x10+4 ] )[0]
-		self.order = idx
-		t, g, i = struct.unpack("3L", buffer)
+		t, g, i,self.fileLocation, self.filesize  = struct.unpack("3Lll", buffer)
 		self.TGI = { 't':t ,'g':g,'i':i }
+		self.initialFileLocation = self.fileLocation
+		self.order = idx
 			
 	def ReadFile( self, sc4, readWhole = True , decompress = False ):    
 		self.rawContent = None
@@ -91,12 +88,12 @@ class SaveFile( object ):
 		self.header = self.sc4.read( 96 )
 		self.header = self.header[0:0x30]+'\0'*12+self.header[0x30+12:96]
 		raw = struct.unpack("4s17I24s", self.header)
-		self.indexRecordEntryCount = raw[10]
-		self.indexRecordPosition = raw[11]
-		self.indexRecordLength = raw[12]
-		self.holeRecordEntryCount = raw[13]
-		self.holeRecordPosition = raw[14]
-		self.holeRecordLength = raw[15]
+		self.indexRecordEntryCount = raw[9]
+		self.indexRecordPosition = raw[10]
+		self.indexRecordLength = raw[11]
+		self.holeRecordEntryCount = raw[12]
+		self.holeRecordPosition = raw[13]
+		self.holeRecordLength = raw[14]
 		self.dateCreated = raw[3]
 		self.dateUpdated = raw[4]
 		self.fileVersionMajor = raw[1]
@@ -257,19 +254,19 @@ class SC4File( object ):
 		self.header = self.sc4.read( 96 )
 		self.header = self.header[0:0x30]+'\0'*12+self.header[0x30+12:96]
 		raw = struct.unpack("4s17I24s", self.header)
-		self.indexRecordEntryCount = raw[10]
-		self.indexRecordPosition = raw[11]
-		self.indexRecordLength = raw[12]
-		self.holeRecordEntryCount = raw[13]
-		self.holeRecordPosition = raw[14]
-		self.holeRecordLength = raw[15]
+		self.indexRecordEntryCount = raw[9]
+		self.indexRecordPosition = raw[10]
+		self.indexRecordLength = raw[11]
+		self.holeRecordEntryCount = raw[12]
+		self.holeRecordPosition = raw[13]
+		self.holeRecordLength = raw[14]
 		self.dateCreated = raw[3]
 		self.dateUpdated = raw[4]
 		self.fileVersionMajor = raw[1]
 		self.fileVersionMinor = raw[2]
 		self.indexRecordType = raw[8]
 
-		print os.path.split( self.fileName )[1], self.indexRecordPosition, self.holeRecordEntryCount, self.holeRecordPosition, self.holeRecordLength
+		print os.path.split( self.fileName )[1], self.indexRecordPosition, self.indexRecordEntryCount, self.indexRecordLength
 	
 	def ReadEntries( self ):
 		"""Read all entries, only a few are read deeply and only the height entry is kept"""
