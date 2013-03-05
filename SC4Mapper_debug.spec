@@ -7,17 +7,15 @@ pyz = PYZ(a.pure)
 exe = EXE(pyz,
           a.scripts,
           exclude_binaries=1,
-          name=os.path.join('build\\pyi.win32\\SC4Mapper', 'SC4Mapper.exe'),
+          name=os.path.join('build\\pyi.win32\\SC4Mapper_debug', 'SC4Mapper_debug.exe'),
           debug=False,
           strip=None,
           upx=True,
-          console=False )
+          console=True )
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
                a.datas,
                strip=None,
                upx=True,
-               name=os.path.join('dist', 'SC4Mapper'))
-app = BUNDLE(coll,
-             name=os.path.join('dist', 'SC4Mapper.app'))
+               name=os.path.join('dist', 'SC4Mapper_debug'))

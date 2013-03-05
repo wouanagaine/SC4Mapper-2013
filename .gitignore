@@ -4,4 +4,5 @@ dist/
 *.pyo
 *.pyc
 *.pyd
-
+*.exe
+*.zip
